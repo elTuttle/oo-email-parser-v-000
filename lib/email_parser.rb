@@ -15,6 +15,7 @@ class EmailParser
   def parse
     temp_array = []
     temp_array << EMAILS.scan(/[a-zA-Z0-9_@.-]+/)
+    temp_array
   end
 
 end
