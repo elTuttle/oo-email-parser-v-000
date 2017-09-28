@@ -11,7 +11,8 @@ class EmailParser
   end
 
   def parse
-    @emails.scan(/[a-zA-Z0-9_@.-]+/)
+    @emails.scan(/[a-zA-Z0-9_@.-]+/).each_with_index do |email,index|
+    @emails.scan(/[a-zA-Z0-9_@.-]+/).delete_if {|email| @emails.scan(/[a-zA-Z0-9_@.-]+/.include?(email)}
   end
 
 end
