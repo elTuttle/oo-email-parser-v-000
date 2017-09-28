@@ -4,9 +4,15 @@
 # or whitespace (' ').
 class EmailParser
 
+  attr_accessor :emails
+    
   EMAILS = []
   def initialize(emails)
-    EMAILS << emails.scan(/[a-zA-Z0-9_@.-]+/)
+    
+  end
+
+  def parse
+    EMAILS << @emails.scan(/[a-zA-Z0-9_@.-]+/)
   end
 
   EMAILS
