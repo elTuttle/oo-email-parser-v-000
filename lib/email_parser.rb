@@ -5,15 +5,15 @@
 class EmailParser
 
   attr_accessor :emails
-    
+
   EMAILS = []
   def initialize(emails)
-    
+
   end
 
   def parse
     EMAILS << @emails.scan(/[a-zA-Z0-9_@.-]+/)
+    EMAILS
   end
 
-  EMAILS
 end
