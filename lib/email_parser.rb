@@ -7,13 +7,14 @@ class EmailParser
   attr_accessor :emails
 
   EMAILS = ""
-  
+
   def initialize(emails)
     EMAILS = emails
   end
 
   def parse
-    EMAILS << @emails.scan(/[a-zA-Z0-9_@.-]+/)
+    temp_array
+    temp_array << @emails.scan(/[a-zA-Z0-9_@.-]+/)
     EMAILS
   end
 
