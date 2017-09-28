@@ -11,8 +11,7 @@ class EmailParser
   end
 
   def parse
-    @emails = @emails.scan(/[a-zA-Z0-9_@.-]+/)
-    @emails
+    @emails.scan(/[a-zA-Z0-9_@.-]+/).uniq
   end
 
 end
